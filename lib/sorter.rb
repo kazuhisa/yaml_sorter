@@ -1,12 +1,12 @@
 require 'ya2yaml'
 require 'yaml'
 
-class YamlSorter
+class Sorter
   def initialize(arg)
     @raw = arg
   end
 
   def sort
-     @raw.sort_by_key.ya2yaml.gsub(/\s$/,"\n")
+     @raw.sort_by_key.ya2yaml
   end
 end

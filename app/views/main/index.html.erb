@@ -1,4 +1,15 @@
+<%= link_to 'YAML Sorter', action: :index %>
+<%= link_to image_tag('github-logo.png'), 'https://github.com/kazuhisa/yaml_sorter' %>
+<%=  %>
+<% if @error %>
+  <p class='error'>
+    <%= image_tag 'error.jpg',alt: 'error' %><br>
+    <%= link_to 'https://www.flickr.com/photos/29487672@N07/14730452005','https://www.flickr.com/photos/29487672@N07/14730452005' %><br>
+<br>
+    <%= @error_message %>
+  </p>
+<% end %>
 <%= form_tag(convert_main_index_path) do %>
-  <%= text_area_tag :content, @text %>
-  <%= submit_tag 'sort' %>
+  <%= text_area_tag :content, @text, size: '100x40' %>
+  <p><%= submit_tag 'sort' %></p>
 <% end %>
